@@ -1,0 +1,12 @@
+.gas-expenses-container {
+    @apply text-center py-10 px-8; /* Center content, add padding */
+  }
+  
+  .gas-expenses-title {
+    @apply text-4xl font-bold text-gray-800 mb-6; /* Large title, bold */
+  }
+  
+  .gas-expenses-list {
+    @apply text-lg text-gray-600 space-y-4; /* Medium text, space between items */
+  }
+  

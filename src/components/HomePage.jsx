@@ -12,7 +12,7 @@ const HomePage = () => {
           <p className="welcome-text">
             Welcome to your Smart Personal Finance Manager. Here you can manage your finances easily and effectively.
           </p>
-          <p className="balance">Balance: $5000</p>
+          <p className="balance">Balance: 5000KM</p>
         </div>
 
         {/* Right side image */}
@@ -23,26 +23,48 @@ const HomePage = () => {
 
       {/* Expenses Section */}
       <div className="expenses-container">
+        {/* Buttons Section */}
+        <div className="expenses-buttons">
+          <button className="expense-button">Add Money</button>
+          <button className="expense-button">Exchange</button>
+          <button className="expense-button">Details</button>
+          <button className="expense-button">More</button>
+        </div>
+
         <h2 className="expenses-title">Monthly Expenses</h2>
+
         <div className="expenses-list">
           <div className="expense-item">
             <span className="expense-name">Water bill:</span>
-            <span className="expense-amount">$30</span>
+            <span className="expense-amount">30KM</span>
           </div>
           <div className="expense-item">
             <span className="expense-name">Electricity bill:</span>
-            <span className="expense-amount">$60</span>
+            <span className="expense-amount">60KM</span>
           </div>
           <div className="expense-item">
             <span className="expense-name">Coffee:</span>
-            <span className="expense-amount">$15</span>
+            <span className="expense-amount">50KM</span>
           </div>
           <div className="expense-item">
             <span className="expense-name">Gas:</span>
-            <span className="expense-amount">$40</span>
+            <span className="expense-amount">300KM</span>
+          </div>
+          <div className="expense-item">
+            <span className="expense-name">Clothes:</span>
+            <span className="expense-amount">140KM</span>
+          </div>
+          <div className="expense-item">
+            <span className="expense-name">Groceries:</span>
+            <span className="expense-amount">300KM</span>
+          </div>
+          <div className="expense-item">
+            <span className="expense-name">See more</span>
           </div>
         </div>
       </div>
+
+     
     </div>
   );
 };

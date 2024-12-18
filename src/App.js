@@ -6,6 +6,7 @@ import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import Navbar from './components/Navbar'; // Import Navbar
 import ProfilePage from './components/ProfilePage';
+import GasExpensesPage from './components/GasExpensesPage';
 
 function App() {
   const location = useLocation(); // Get the current location
@@ -21,7 +22,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/profile" element={<ProfilePage />} />
-
+        <Route path="/gas-expenses" element={<GasExpensesPage />} />
       </Routes>
     </div>
   );

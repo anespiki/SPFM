@@ -1,36 +1,35 @@
-/* src/styles/profile-page.css */
-
-/* Container for the profile page */
+/* Main profile container */
 .profile-container {
-    @apply flex justify-center items-start  h-screen pt-10; /* Adjust pt-10 to reduce top padding */
+    @apply flex flex-col items-center justify-center py-10 px-4;
   }
   
-  /* Profile content (flex container for photo and info) */
+  /* Profile content container */
   .profile-content {
-    @apply bg-white p-8 rounded-lg shadow-lg w-96 text-center;
+    @apply max-w-lg w-full text-center bg-gray-100 p-6 rounded-lg shadow-md;
   }
   
-  /* Profile picture */
-  .profile-picture {
-    @apply mb-6;
-  }
-  
+  /* Profile picture styling */
   .profile-picture img {
-    @apply w-36 h-36 object-cover mx-auto; /* Ensure the image is circular and centered */
+    @apply w-32 h-32 object-cover mx-auto mb-4;
   }
   
-  /* Profile title (name) */
+  /* Profile title and text */
   .profile-title {
-    @apply text-2xl font-bold text-gray-800 mb-2;
+    @apply text-2xl font-bold text-gray-800;
   }
   
-  /* Profile email */
-  .profile-email {
-    @apply text-lg text-gray-600 mb-2;
-  }
-  
-  /* Profile bio (description) */
+  .profile-email,
   .profile-bio {
-    @apply text-gray-600 text-sm mt-4;
+    @apply text-lg text-gray-600 mt-2;
+  }
+  
+  /* Buttons container */
+  .profile-buttons {
+    @apply mt-6 flex flex-col items-center gap-4; /* Vertically stack buttons */
+  }
+  
+  /* Individual button styling */
+  .profile-button {
+    @apply bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-all duration-200 w-full max-w-xs; /* Red background, full width */
   }
   

@@ -1,79 +1,110 @@
-/* src/styles/home-page.css */
-
-/* Custom styles for Home Page */
-
 /* Main content container */
 .main-content {
-  @apply px-8 py-10 ; /* Horizontal and vertical padding, background color */
+  @apply px-8 py-10; /* Padding for consistent spacing */
 }
 
 /* The container to center content horizontally */
 .home-container {
-  @apply max-w-4xl mx-auto flex justify-between items-center; /* Centered container with space between content */
+  @apply max-w-4xl mx-auto flex justify-between items-center; /* Centered container */
 }
 
 /* Left side content */
 .left-content {
-  @apply text-left; /* Align text to the left */
+  @apply text-left;
 }
 
 /* Welcome message */
 .welcome-title {
-  @apply text-4xl font-bold text-gray-800; /* Large, bold welcome text */
+  @apply text-4xl font-bold text-gray-800;
 }
 
 /* Welcome text description */
 .welcome-text {
-  @apply mt-4 text-lg text-gray-600; /* Add margin-top, medium text size, light gray color */
+  @apply mt-4 text-lg text-gray-600;
 }
 
 /* Balance text */
 .balance {
-  @apply mt-6 text-xl font-semibold text-gray-800; /* Margin top, larger text size, bold font */
+  @apply mt-6 text-xl font-semibold text-gray-800;
 }
 
 /* Right side image container */
 .image-container {
-  @apply ml-8; /* Left margin to push image right */
+  @apply ml-8;
 }
 
 /* Image styles */
 .image-container img {
-  @apply w-full h-auto object-contain shadow-md border-none; /* Ensure the entire image is visible */
+  @apply w-full h-auto object-contain shadow-md border-none;
 }
 
 /* Expenses Section */
 .expenses-container {
-  @apply mt-10 text-center; /* Margin top, center text */
+  @apply mt-12 max-w-4xl mx-auto; /* Center container with margin-top */
 }
 
 .expenses-title {
-  @apply text-3xl font-bold text-gray-800; /* Title font size, bold, dark color */
+  @apply text-3xl font-bold text-gray-800 mb-6 text-left; /* Title is above and left-aligned */
 }
 
 .expenses-list {
-  @apply mt-6 text-left max-w-xl mx-auto; /* Center the list with left-aligned items */
+  @apply text-left w-full; /* List is aligned left */
 }
 
 .expense-item {
-  @apply flex justify-between py-2 text-lg text-gray-700 border-b border-gray-300; /* Flex for items, spaced out, with a bottom border */
+  @apply flex justify-between py-2 text-lg text-gray-700 border-b border-gray-300; /* Item layout */
 }
 
 .expense-name {
-  @apply font-semibold; /* Bold font for expense names */
+  @apply font-semibold;
 }
 
 .expense-amount {
-  @apply text-red-500; /* Red color for the amounts */
+  @apply text-red-500;
 }
+
+/* Buttons Section */
+.expenses-buttons {
+  @apply flex justify-center gap-4 mt-4; /* Center buttons, add space between */
+  @apply mb-6; /* Add margin-bottom to separate buttons from the title */
+}
+
+.expense-button {
+  @apply px-4 py-2 bg-red-500 text-white rounded-md font-medium hover:bg-red-600 transition duration-200; /* Button styles */
+}
+
+/* Hover effect */
+.expense-button:hover {
+  @apply bg-red-600; /* Darker red on hover */
+}
+
+/* Title spacing */
+.expenses-title {
+  @apply text-3xl font-bold text-gray-800 mb-4; /* Title font size, bold, dark color, and spacing */
+}
+
+
+
+/* For responsiveness on small screens */
+@media (max-width: 768px) {
+  .info-boxes {
+    @apply flex-col; /* Stack the boxes vertically on smaller screens */
+  }
+
+  .info-box {
+    @apply mb-6; /* Add margin at the bottom of each box when stacked */
+  }
+}
+
+
 
 /* For responsiveness */
 @media (min-width: 640px) {
   .image-container img {
-    @apply w-64 h-auto; /* Larger image on larger screens */
+    @apply w-64 h-auto;
   }
 
   .expenses-list {
-    @apply text-xl; /* Larger text on larger screens */
+    @apply text-xl;
   }
 }

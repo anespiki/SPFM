@@ -19,9 +19,16 @@ const ProfilePage = () => {
         <div className="profile-info">
           <h1 className="profile-title">John Doe</h1>
           <p className="profile-email">Email: johndoe@example.com</p>
-          <p className="profile-bio">
-            I am a passionate software developer who loves building intuitive and scalable applications. I am always eager to learn new technologies and improve my skills.
-          </p>
+          <p className="profile-bio">johndoe</p>
+        </div>
+
+        {/* Buttons Section */}
+        <div className="profile-buttons">
+          <button className="profile-button">Help</button>
+          <button className="profile-button">Account</button>
+          <button className="profile-button">Inbox</button>
+          <button className="profile-button">Security & Privacy</button>
+          <button className="profile-button">Sign Out</button>
         </div>
       </div>
     </div>
