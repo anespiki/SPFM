@@ -1,0 +1,28 @@
+/* src/styles/contact-page.css */
+
+/* Custom styles for Contact Page */
+
+/* Main content container */
+.main-content {
+  @apply px-8 py-10; /* Horizontal and vertical padding, background color */
+}
+
+/* Contact container */
+.contact-container {
+  @apply max-w-4xl mx-auto text-center; /* Center the content with a max width */
+}
+
+/* Title for Contact Page */
+.contact-title {
+  @apply text-4xl font-bold text-gray-800; /* Large, bold title */
+}
+
+/* Text for Contact Page */
+.contact-text {
+  @apply mt-6 text-lg text-gray-600; /* Margin top, medium text size, light gray color */
+}
+
+/* Contact information */
+.contact-info {
+  @apply mt-4 text-lg font-semibold text-gray-700; /* Margin top, medium text size, bold font */
+}

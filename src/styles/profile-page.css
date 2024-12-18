@@ -1,0 +1,36 @@
+/* src/styles/profile-page.css */
+
+/* Container for the profile page */
+.profile-container {
+    @apply flex justify-center items-start  h-screen pt-10; /* Adjust pt-10 to reduce top padding */
+  }
+  
+  /* Profile content (flex container for photo and info) */
+  .profile-content {
+    @apply bg-white p-8 rounded-lg shadow-lg w-96 text-center;
+  }
+  
+  /* Profile picture */
+  .profile-picture {
+    @apply mb-6;
+  }
+  
+  .profile-picture img {
+    @apply w-36 h-36 object-cover mx-auto; /* Ensure the image is circular and centered */
+  }
+  
+  /* Profile title (name) */
+  .profile-title {
+    @apply text-2xl font-bold text-gray-800 mb-2;
+  }
+  
+  /* Profile email */
+  .profile-email {
+    @apply text-lg text-gray-600 mb-2;
+  }
+  
+  /* Profile bio (description) */
+  .profile-bio {
+    @apply text-gray-600 text-sm mt-4;
+  }
+  

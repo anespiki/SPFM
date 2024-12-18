@@ -1,0 +1,79 @@
+/* src/styles/home-page.css */
+
+/* Custom styles for Home Page */
+
+/* Main content container */
+.main-content {
+  @apply px-8 py-10 ; /* Horizontal and vertical padding, background color */
+}
+
+/* The container to center content horizontally */
+.home-container {
+  @apply max-w-4xl mx-auto flex justify-between items-center; /* Centered container with space between content */
+}
+
+/* Left side content */
+.left-content {
+  @apply text-left; /* Align text to the left */
+}
+
+/* Welcome message */
+.welcome-title {
+  @apply text-4xl font-bold text-gray-800; /* Large, bold welcome text */
+}
+
+/* Welcome text description */
+.welcome-text {
+  @apply mt-4 text-lg text-gray-600; /* Add margin-top, medium text size, light gray color */
+}
+
+/* Balance text */
+.balance {
+  @apply mt-6 text-xl font-semibold text-gray-800; /* Margin top, larger text size, bold font */
+}
+
+/* Right side image container */
+.image-container {
+  @apply ml-8; /* Left margin to push image right */
+}
+
+/* Image styles */
+.image-container img {
+  @apply w-full h-auto object-contain shadow-md border-none; /* Ensure the entire image is visible */
+}
+
+/* Expenses Section */
+.expenses-container {
+  @apply mt-10 text-center; /* Margin top, center text */
+}
+
+.expenses-title {
+  @apply text-3xl font-bold text-gray-800; /* Title font size, bold, dark color */
+}
+
+.expenses-list {
+  @apply mt-6 text-left max-w-xl mx-auto; /* Center the list with left-aligned items */
+}
+
+.expense-item {
+  @apply flex justify-between py-2 text-lg text-gray-700 border-b border-gray-300; /* Flex for items, spaced out, with a bottom border */
+}
+
+.expense-name {
+  @apply font-semibold; /* Bold font for expense names */
+}
+
+.expense-amount {
+  @apply text-red-500; /* Red color for the amounts */
+}
+
+/* For responsiveness */
+@media (min-width: 640px) {
+  .image-container img {
+    @apply w-64 h-auto; /* Larger image on larger screens */
+  }
+
+  .expenses-list {
+    @apply text-xl; /* Larger text on larger screens */
+  }
+}

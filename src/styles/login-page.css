@@ -1,0 +1,57 @@
+/* src/styles/login-page.css */
+
+/* Container to center the login form */
+.login-container {
+  @apply flex justify-center items-center h-screen bg-gray-100;
+}
+
+/* The login box inside the red square */
+.login-box {
+  @apply bg-red-500 p-12 rounded-lg shadow-2xl w-[500px];
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.login-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.login-title {
+  @apply text-white text-4xl font-bold mb-8 text-center;
+  letter-spacing: 1px;
+}
+
+/* Input field container for spacing */
+.input-container {
+  @apply mb-6; /* Space between input groups */
+}
+
+.input-label {
+  @apply block text-white text-lg font-semibold mb-2; /* Added explicit bottom margin */
+}
+
+/* Input fields */
+.input-field {
+  @apply w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 5px rgba(239, 68, 68, 0.7);
+}
+
+/* Login button */
+.button-container {
+  @apply flex justify-end;
+}
+
+.login-button {
+  @apply py-3 px-6 bg-white text-red-500 font-semibold rounded-md text-lg;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  @apply bg-red-600 text-white;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+}

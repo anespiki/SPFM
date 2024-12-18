@@ -1,0 +1,51 @@
+/* src/styles/about-page.css */
+
+/* Custom styles for About Page */
+
+/* Main content container */
+.main-content {
+  @apply px-8 py-10 ; /* Horizontal and vertical padding, background color */
+}
+
+/* About container */
+.about-container {
+  @apply max-w-4xl mx-auto text-center; /* Center the content with a max width */
+}
+
+/* Title for About Page */
+.about-title {
+  @apply text-4xl font-bold text-gray-800; /* Large, bold title */
+}
+
+/* Text for About Page */
+.about-text {
+  @apply mt-6 text-lg text-gray-600; /* Margin top, medium text size, light gray color */
+}
+
+/* Subtitle for location section */
+.about-subtitle {
+  @apply text-2xl font-semibold text-gray-700 mt-8; /* Subtitle text */
+}
+
+/* Location description */
+.location-text {
+  @apply mt-4 text-lg text-gray-600; /* Add margin-top, medium text size */
+}
+
+/* Google Map container */
+.google-map-container {
+  @apply mt-6; /* Add margin-top to map */
+}
+
+/* Make the iframe responsive */
+.google-map-container iframe {
+  @apply w-full max-w-4xl mx-auto; /* Full width, max width of the container */
+  height: 450px; /* Fixed height */
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .google-map-container iframe {
+    height: 300px; /* Smaller height on mobile screens */
+  }
+}
