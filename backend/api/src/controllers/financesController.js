@@ -153,7 +153,6 @@ exports.addExpenseCategory = async (req, res) => {
 
 
 // Method to add expense to some category
-
 exports.addExpenseToCategory = async (req, res) => {
     // Retrieving the categoryName from the frontend
     const { categoryName, expenseName, expenseValue, date } = req.body;
@@ -170,3 +169,19 @@ exports.addExpenseToCategory = async (req, res) => {
     // Send a response with the updated dummy data
     res.status(200).json({ message: "Category Expense added successfully", data: expensesDummyData });
 }
+
+//Method that will calculate total expenses and return it summ
+exports.returnTotalExpenses = async (req, res) => {
+    try {
+        // Calculate the total expenses by summing the expenseValue of each expense
+        const totalExpenses = expensesDummyData.reduce((total, expense) => {
+            return total + parseFloat(expense.expenseValue); // Add the expenseValue to the total
+        }, 0);
+
+        // Return the total expenses in the response
+        res.json({ totalExpenses });
+    } catch (error) {
+        console.error("Error calculating total expenses:", error);
+        res.status(500).json({ message: "Error calculating total expenses" });
+    }
+};

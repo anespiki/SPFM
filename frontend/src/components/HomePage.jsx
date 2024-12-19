@@ -6,6 +6,11 @@ import axios from 'axios';
 import { FaPlus } from 'react-icons/fa';
 
 const HomePage = () => {
+
+  const [totalExpenses, setTotalExpenses] = useState(0);
+
+
+  //Variables for category expenses component
   const { categorySlug } = useParams(); // Get the category from the URL
   const [expenses, setExpenses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -72,6 +77,7 @@ const HomePage = () => {
       ];
       await axios.post(`http://localhost:5001/api/finances/add-expenses-category`, { categoryName: newCategory });
       setCategories(updatedCategories);
+      fetchTotalExpenses();
       setNewCategory(''); // Clear the input
       closeModal(); // Close the modal
     }
@@ -103,7 +109,8 @@ const HomePage = () => {
         });
         const result = await axios.post(`http://localhost:5001/api/finances/return-each-category-with-expenses`);
         setCategories(result.data);
-
+        //Fetch Total Expenses after new Expense is added
+        fetchTotalExpenses();
         // Optionally, update the local state to reflect the new expense
         setExpenses((prevExpenses) => [
           ...prevExpenses,
@@ -118,10 +125,21 @@ const HomePage = () => {
   };
 
 
+  const fetchTotalExpenses = async () => {
+    try {
+      const result = await axios.post(`http://localhost:5001/api/finances/return-total-expenses`);
+      setTotalExpenses(result.data.totalExpenses);
+    } catch (error) {
+      console.error("Error fetching expense categories:", error);
+    }
+  };
+
   // Call fetchExpensesCategories on component mount
   useEffect(() => {
     fetchExpensesCategories();
+    fetchTotalExpenses();
   }, []);
+
 
   // Fetch expenses when categorySlug changes
   useEffect(() => {
@@ -136,7 +154,7 @@ const HomePage = () => {
       <div className="home-container">
         {/* Left content */}
         <div className="left-content">
-          <h1 className="welcome-title">Welcome Kerim</h1>
+          <h1 className="welcome-title">Welcome Tarik</h1>
           <p className="welcome-text">
             Welcome to your Smart Personal Finance Manager. Here you can manage your finances easily and effectively.
           </p>
@@ -153,6 +171,10 @@ const HomePage = () => {
 
 
         <h2 className="expenses-title">Monthly Expenses 💵💸💰</h2>
+        <h4 className="expenses-subtitle">
+          Tarik, you spend <span style={{ fontWeight: 'bold' }}>{totalExpenses}</span> <span style={{ fontWeight: 'bold' }}>KM</span> this month. 😡
+        </h4>
+
 
         {/* Categories List */}
         <div className="expenses-list">

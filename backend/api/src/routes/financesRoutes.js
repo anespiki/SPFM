@@ -14,5 +14,6 @@ router.post('/return-expenses-from-category', financesController.returnExpensesF
 router.post('/return-each-category-with-expenses', financesController.returnEachCategoryWithItsExpense);
 router.post('/add-expenses-category', financesController.addExpenseCategory);
 router.post('/add-expense-to-category', financesController.addExpenseToCategory);
+router.post('/return-total-expenses', financesController.returnTotalExpenses);
 
 module.exports = router;

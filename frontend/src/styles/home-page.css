@@ -50,6 +50,11 @@
   @apply text-3xl font-bold text-gray-800 mb-6 text-left;
   /* Title is above and left-aligned */
 }
+.expenses-subtitle {
+  @apply text-xl font-semibold text-gray-400 mb-3 text-left;
+  /* Title is above and left-aligned */
+}
+
 
 /* Expenses list */
 .expenses-list {
