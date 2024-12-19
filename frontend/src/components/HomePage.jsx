@@ -26,9 +26,7 @@ const HomePage = () => {
       <div className="expenses-container">
         {/* Buttons Section */}
         <div className="expenses-buttons">
-          <Link to="/add-money">
-            <button className="expense-button">Add Money</button>
-          </Link>
+          <button className="expense-button">Add Money</button>
           <button className="expense-button">Exchange</button>
           <button className="expense-button">Details</button>
           <button className="expense-button">More</button>
@@ -37,30 +35,47 @@ const HomePage = () => {
         <h2 className="expenses-title">Monthly Expenses</h2>
 
         <div className="expenses-list">
-          <div className="expense-item">
-            <span className="expense-name">Water bill:</span>
-            <span className="expense-amount">30KM</span>
-          </div>
-          <div className="expense-item">
-            <span className="expense-name">Electricity bill:</span>
-            <span className="expense-amount">60KM</span>
-          </div>
-          <div className="expense-item">
-            <span className="expense-name">
-              <Link to="/gas-expenses" className="expense-link">
-                Gas:
-              </Link>
-            </span>
-            <span className="expense-amount">300KM</span>
-          </div>
-          <div className="expense-item">
-            <span className="expense-name">Clothes:</span>
-            <span className="expense-amount">140KM</span>
-          </div>
-          <div className="expense-item">
-            <span className="expense-name">Groceries:</span>
-            <span className="expense-amount">300KM</span>
-          </div>
+          <Link to="/water-bill" className="expense-item-link">
+            <div className="expense-item">
+              <span className="expense-name">Water bill:</span>
+              <span className="expense-amount">30KM</span>
+            </div>
+          </Link>
+          <Link to="/electricity-bill" className="expense-item-link">
+            <div className="expense-item">
+              <span className="expense-name">Electricity bill:</span>
+              <span className="expense-amount">60KM</span>
+            </div>
+          </Link>
+          <Link to="/coffee" className="expense-item-link">
+            <div className="expense-item">
+              <span className="expense-name">Coffee:</span>
+              <span className="expense-amount">50KM</span>
+            </div>
+          </Link>
+          <Link to="/gas-expenses" className="expense-item-link">
+            <div className="expense-item">
+              <span className="expense-name">Gas:</span>
+              <span className="expense-amount">300KM</span>
+            </div>
+          </Link>
+          <Link to="/clothes" className="expense-item-link">
+            <div className="expense-item">
+              <span className="expense-name">Clothes:</span>
+              <span className="expense-amount">140KM</span>
+            </div>
+          </Link>
+          <Link to="/groceries" className="expense-item-link">
+            <div className="expense-item">
+              <span className="expense-name">Groceries:</span>
+              <span className="expense-amount">300KM</span>
+            </div>
+          </Link>
+          <Link to="/see-more" className="expense-item-link">
+            <div className="expense-item">
+              <span className="expense-name">See more</span>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

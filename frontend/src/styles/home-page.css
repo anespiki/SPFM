@@ -47,18 +47,33 @@
   @apply text-3xl font-bold text-gray-800 mb-6 text-left; /* Title is above and left-aligned */
 }
 
+/* Expenses list */
 .expenses-list {
   @apply text-left w-full; /* List is aligned left */
 }
 
-.expense-item {
-  @apply flex justify-between py-2 text-lg text-gray-700 border-b border-gray-300; /* Item layout */
+/* Expense item link */
+.expense-item-link {
+  @apply block; /* Makes the entire row clickable */
+  @apply transition duration-200; /* Smooth transition */
 }
 
+/* Hover effect for expense items */
+.expense-item-link:hover .expense-item {
+  @apply bg-red-100; /* Highlight the background on hover */
+}
+
+/* Individual expense item */
+.expense-item {
+  @apply flex justify-between py-2 px-4 text-lg text-gray-700 border-b border-gray-300 rounded-md;
+}
+
+/* Expense name styling */
 .expense-name {
   @apply font-semibold;
 }
 
+/* Expense amount styling */
 .expense-amount {
   @apply text-red-500;
 }
@@ -69,6 +84,7 @@
   @apply mb-6; /* Add margin-bottom to separate buttons from the title */
 }
 
+/* Expense buttons */
 .expense-button {
   @apply px-4 py-2 bg-red-500 text-white rounded-md font-medium hover:bg-red-600 transition duration-200; /* Button styles */
 }
@@ -83,8 +99,6 @@
   @apply text-3xl font-bold text-gray-800 mb-4; /* Title font size, bold, dark color, and spacing */
 }
 
-
-
 /* For responsiveness on small screens */
 @media (max-width: 768px) {
   .info-boxes {
@@ -95,8 +109,6 @@
     @apply mb-6; /* Add margin at the bottom of each box when stacked */
   }
 }
-
-
 
 /* For responsiveness */
 @media (min-width: 640px) {
