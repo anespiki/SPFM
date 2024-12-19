@@ -26,7 +26,9 @@ const HomePage = () => {
       <div className="expenses-container">
         {/* Buttons Section */}
         <div className="expenses-buttons">
-          <button className="expense-button">Add Money</button>
+          <Link to="/add-money">
+            <button className="expense-button">Add Money</button>
+          </Link>
           <button className="expense-button">Exchange</button>
           <button className="expense-button">Details</button>
           <button className="expense-button">More</button>
@@ -44,10 +46,6 @@ const HomePage = () => {
             <span className="expense-amount">60KM</span>
           </div>
           <div className="expense-item">
-            <span className="expense-name">Coffee:</span>
-            <span className="expense-amount">50KM</span>
-          </div>
-          <div className="expense-item">
             <span className="expense-name">
               <Link to="/gas-expenses" className="expense-link">
                 Gas:
@@ -62,9 +60,6 @@ const HomePage = () => {
           <div className="expense-item">
             <span className="expense-name">Groceries:</span>
             <span className="expense-amount">300KM</span>
-          </div>
-          <div className="expense-item">
-            <span className="expense-name">See more</span>
           </div>
         </div>
       </div>

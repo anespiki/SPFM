@@ -7,6 +7,7 @@ import ContactPage from './components/ContactPage';
 import Navbar from './components/Navbar'; // Import Navbar
 import ProfilePage from './components/ProfilePage';
 import GasExpensesPage from './components/GasExpensesPage';
+import AddMoneyPage from './components/AddMoneyPage';
 
 function App() {
   const location = useLocation(); // Get the current location
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/gas-expenses" element={<GasExpensesPage />} />
+        <Route path="/add-money" element={<AddMoneyPage />} />
       </Routes>
     </div>
   );

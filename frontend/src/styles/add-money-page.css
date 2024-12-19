@@ -1,0 +1,25 @@
+
+/* Container for the page */
+.container {
+  @apply flex flex-col items-center justify-start min-h-screen bg-gray-100 p-6 pt-16; /* Added pt-16 for spacing from the top */
+}
+
+/* Title styling */
+.title {
+  @apply text-4xl font-bold text-gray-800 mb-6;
+}
+
+/* Description text */
+.description {
+  @apply text-lg text-gray-600 mb-8 text-center;
+}
+
+/* Button container */
+.button-container {
+  @apply flex flex-col gap-4;
+}
+
+/* Button styles */
+.option-button {
+  @apply w-64 py-3 bg-red-500 text-white text-lg font-medium rounded-lg shadow-md hover:bg-red-600 transition;
+}
