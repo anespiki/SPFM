@@ -24,17 +24,12 @@ const ProfilePage = () => {
 
         {/* Profile Information */}
         <div className="profile-info">
-          <h1 className="profile-title">John Doe</h1>
-          <p className="profile-email">Email: johndoe@example.com</p>
-          <p className="profile-bio">johndoe</p>
+          <h1 className="profile-title">Tarik</h1>
+          <p className="profile-bio">I am Tarik and this is my Web Project.</p>
         </div>
 
         {/* Buttons Section */}
         <div className="profile-buttons">
-          <button className="profile-button">Help</button>
-          <button className="profile-button">Account</button>
-          <button className="profile-button">Inbox</button>
-          <button className="profile-button">Security & Privacy</button>
           <button className="profile-button" onClick={handleLogout}>Sign Out</button>
         </div>
       </div>
