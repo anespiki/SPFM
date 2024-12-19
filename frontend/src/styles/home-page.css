@@ -1,11 +1,13 @@
 /* Main content container */
 .main-content {
-  @apply px-8 py-10; /* Padding for consistent spacing */
+  @apply px-8 py-10;
+  /* Padding for consistent spacing */
 }
 
 /* The container to center content horizontally */
 .home-container {
-  @apply max-w-4xl mx-auto flex justify-between items-center; /* Centered container */
+  @apply max-w-4xl mx-auto flex justify-between items-center;
+  /* Centered container */
 }
 
 /* Left side content */
@@ -40,27 +42,33 @@
 
 /* Expenses Section */
 .expenses-container {
-  @apply mt-12 max-w-4xl mx-auto; /* Center container with margin-top */
+  @apply mt-12 max-w-4xl mx-auto;
+  /* Center container with margin-top */
 }
 
 .expenses-title {
-  @apply text-3xl font-bold text-gray-800 mb-6 text-left; /* Title is above and left-aligned */
+  @apply text-3xl font-bold text-gray-800 mb-6 text-left;
+  /* Title is above and left-aligned */
 }
 
 /* Expenses list */
 .expenses-list {
-  @apply text-left w-full; /* List is aligned left */
+  @apply text-left w-full;
+  /* List is aligned left */
 }
 
 /* Expense item link */
 .expense-item-link {
-  @apply block; /* Makes the entire row clickable */
-  @apply transition duration-200; /* Smooth transition */
+  @apply block;
+  /* Makes the entire row clickable */
+  @apply transition duration-200;
+  /* Smooth transition */
 }
 
 /* Hover effect for expense items */
 .expense-item-link:hover .expense-item {
-  @apply bg-red-100; /* Highlight the background on hover */
+  @apply bg-red-100;
+  /* Highlight the background on hover */
 }
 
 /* Individual expense item */
@@ -80,33 +88,40 @@
 
 /* Buttons Section */
 .expenses-buttons {
-  @apply flex justify-center gap-4 mt-4; /* Center buttons, add space between */
-  @apply mb-6; /* Add margin-bottom to separate buttons from the title */
+  @apply flex justify-center gap-4 mt-4;
+  /* Center buttons, add space between */
+  @apply mb-6;
+  /* Add margin-bottom to separate buttons from the title */
 }
 
 /* Expense buttons */
 .expense-button {
-  @apply px-4 py-2 bg-red-500 text-white rounded-md font-medium hover:bg-red-600 transition duration-200; /* Button styles */
+  @apply px-4 py-2 bg-red-500 text-white rounded-md font-medium hover:bg-red-600 transition duration-200;
+  /* Button styles */
 }
 
 /* Hover effect */
 .expense-button:hover {
-  @apply bg-red-600; /* Darker red on hover */
+  @apply bg-red-600;
+  /* Darker red on hover */
 }
 
 /* Title spacing */
 .expenses-title {
-  @apply text-3xl font-bold text-gray-800 mb-4; /* Title font size, bold, dark color, and spacing */
+  @apply text-3xl font-bold text-gray-800 mb-4;
+  /* Title font size, bold, dark color, and spacing */
 }
 
 /* For responsiveness on small screens */
 @media (max-width: 768px) {
   .info-boxes {
-    @apply flex-col; /* Stack the boxes vertically on smaller screens */
+    @apply flex-col;
+    /* Stack the boxes vertically on smaller screens */
   }
 
   .info-box {
-    @apply mb-6; /* Add margin at the bottom of each box when stacked */
+    @apply mb-6;
+    /* Add margin at the bottom of each box when stacked */
   }
 }
 
@@ -119,4 +134,188 @@
   .expenses-list {
     @apply text-xl;
   }
+}
+
+
+.add-category-item {
+  margin-top: 0px;
+  justify-content: flex-start;
+}
+
+.add-category-button {
+  background-color: #4CAF50;
+  /* Green color */
+  color: white;
+  padding: 0px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.add-category-button:hover {
+  background-color: #45a049;
+  /* Darker green on hover */
+}
+
+.add-category-button svg {
+  margin-left: 10px;
+
+  /* Space between text and icon */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Ensure it appears above other content */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-bottom: 0px;
+}
+
+.modal-content input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-category-btn,
+.cancel-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-category-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.add-category-btn:hover {
+  background-color: #45a049;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #e53935;
+}
+
+/* HEREREEEE  */
+.add-expense-button {
+  background-color: rgba(59, 62, 59, 0.9);
+  /* Adjust the opacity (0.5) as needed */
+
+  /* Green color */
+  color: white;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.add-expense-button:hover {
+  background-color: #45a049;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-buttons button {
+  margin: 10px;
+}
+
+.add-expense-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-expense-btn:hover {
+  background-color: #0056b3;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+
+.expense-amount-input {
+  /* display: flex; */
+  align-items: center;
+}
+
+.expense-amount-input input {
+  width: 100px;
+  padding: 8px;
+  margin-right: 5px;
+}
+
+.expense-amount-input span {
+  font-size: 16px;
+  font-weight: bold;
 }

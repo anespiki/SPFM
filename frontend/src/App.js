@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import LoginPage from './components/LoginPage';
-import HomePage from './components/HomePage';
+import HomePage from './components/HomePage';  // HomePage should handle dynamic categories
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import Navbar from './components/Navbar'; // Import Navbar
@@ -25,7 +25,12 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/gas-expenses" element={<GasExpensesPage />} />
         <Route path="/add-money" element={<AddMoneyPage />} />
+        
+        Dynamic route for category pages
+        <Route path="/:categorySlug" element={<HomePage />} /> {/* Dynamic route */}
       </Routes>
+
+
     </div>
   );
 }

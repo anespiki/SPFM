@@ -11,6 +11,7 @@ function LoginPage() {
 
   const handleLogin = async () => {
     try {
+      
       const result = await axios.post(`http://localhost:5001/api/authentication/login`, {
         inputedUsername: username,
         inputedPassword: password
