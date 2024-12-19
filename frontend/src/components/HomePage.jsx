@@ -211,7 +211,7 @@ const HomePage = () => {
               />
               <div className="modal-buttons">
                 <button onClick={handleAddCategory} className="add-category-btn">
-                  Add
+                  Add Category
                 </button>
                 <button onClick={closeModal} className="cancel-btn">
                   Cancel
