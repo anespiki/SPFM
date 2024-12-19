@@ -91,7 +91,6 @@ exports.returnExpensesFromCategory = async (req, res) => {
 
 }
 
-
 //Method that will add expenses to dummy data we created previously 
 exports.addExpenses = async (req, res) => {
     //retrieveing from froneted values for expense

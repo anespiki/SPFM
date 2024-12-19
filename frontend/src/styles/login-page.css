@@ -55,3 +55,16 @@
   @apply bg-red-600 text-white;
   box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
 }
+
+
+.error-message {
+  color: white; /* White text */
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center; /* Center text horizontally */
+  background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red background */
+  padding: 10px 15px; /* Padding for space inside the box */
+  border-radius: 12px; /* Rounded corners */
+  border: 2px solid white; /* White border with 2px thickness */
+  display: inline-block; /* Ensures box width fits content */
+}

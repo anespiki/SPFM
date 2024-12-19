@@ -1,8 +1,15 @@
 import React from 'react';
 import '../styles/profile-page.css'; // Import the custom CSS for styling
 import image2 from '../images/image2.png';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const ProfilePage = () => {
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    navigate('/');
+  };
   return (
     <div className="profile-container">
       <div className="profile-content">
@@ -28,7 +35,7 @@ const ProfilePage = () => {
           <button className="profile-button">Account</button>
           <button className="profile-button">Inbox</button>
           <button className="profile-button">Security & Privacy</button>
-          <button className="profile-button">Sign Out</button>
+          <button className="profile-button" onClick={handleLogout}>Sign Out</button>
         </div>
       </div>
     </div>

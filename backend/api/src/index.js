@@ -1,9 +1,20 @@
 // src/index.js
 
 const express = require('express');
+const cors = require('cors');
+
 
 const app = express();
 
+
+//Configuration of CORS
+const corsOptions = {
+    origin: 'http://localhost:3000', // Domain of digiqal
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specifying allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Specifying allowed headers
+};
+
+app.use(cors(corsOptions));
 
 // Middleware
 app.use(express.json());
