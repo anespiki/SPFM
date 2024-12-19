@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import '../styles/home-page.css'; // Import the custom CSS file
 import image1 from '../images/image1.jpg'; // Import the image
 
@@ -47,7 +48,11 @@ const HomePage = () => {
             <span className="expense-amount">50KM</span>
           </div>
           <div className="expense-item">
-            <span className="expense-name">Gas:</span>
+            <span className="expense-name">
+              <Link to="/gas-expenses" className="expense-link">
+                Gas:
+              </Link>
+            </span>
             <span className="expense-amount">300KM</span>
           </div>
           <div className="expense-item">
@@ -63,8 +68,6 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-
-     
     </div>
   );
 };
