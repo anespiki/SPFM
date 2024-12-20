@@ -245,10 +245,12 @@ const HomePage = () => {
 
             {/* Add Expense Button */}
             <div className="expense-item add-expense-item">
-              <button className="add-expense-button" onClick={() => openAddExpenseModal(categorySlug)} >
-                Add Expense <FaPlus /> {/* Plus icon */}
-              </button>
-            </div>
+  <button className="add-expense-button flex items-center" onClick={() => openAddExpenseModal(categorySlug)}>
+    <span className="mr-1">Add Expense</span>
+    <FaPlus /> {/* Plus icon */}
+  </button>
+</div>
+
           </div>
         )}
 
