@@ -37,8 +37,9 @@
 
 /* Image styles */
 .image-container img {
-  @apply w-full h-auto object-contain shadow-md border-none;
+  @apply w-full h-28 object-contain shadow-md border-none rounded-3xl; /* Add rounded-md for border radius */
 }
+
 
 /* Expenses Section */
 .expenses-container {
